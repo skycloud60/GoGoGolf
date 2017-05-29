@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour {
 	private Vector2 secondClick;
 	private Vector2 result;
 	private GameObject cam;
-	private int scoreValue;
+	[HideInInspector]
 	private GameObject s;
 
 	void Start () 
@@ -37,12 +37,6 @@ public class Ball : MonoBehaviour {
 		GetComponent<Rigidbody> ().AddForce(newVec * resultForce, ForceMode.Impulse);
 
 		s.GetComponent<Strokes> ().strokes++;
-	}
-
-	void Update()
-	{
-		//Debug.Log (cam.transform.forward);
-
 	}
 
 }
